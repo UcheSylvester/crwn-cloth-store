@@ -1,11 +1,10 @@
 {
   "name": "crwn-clothing",
   "version": "0.1.0",
-  "proxy": "http://localhost:5000",
   "private": true,
   "dependencies": {
-    "firebase": "6.0.2",
-    "node-sass": "4.12.0",
+    "firebase": "^7.12.0",
+    "node-sass": "^4.13.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "7.0.3",
@@ -14,7 +13,8 @@
     "redux": "4.0.1",
     "redux-logger": "3.0.6",
     "redux-persist": "5.10.0",
-    "reselect": "4.0.0"
+    "reselect": "4.0.0",
+    "styled-components": "^5.0.1"
   },
   "devDependencies": {
     "react-scripts": "3.0.0"
