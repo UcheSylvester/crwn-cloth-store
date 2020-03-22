@@ -35,6 +35,15 @@ class App extends React.Component {
         });
       }
 
+      // const collectionsToSave = collectionsArray.map(({ title, items }) => ({
+      //   title,
+      //   items
+      // }));
+
+      // console.log(collectionsToSave);
+
+      // addCollectionAndDocuments("collections", collectionsArray);
+
       setCurrentUser(userAuth);
     });
   }
