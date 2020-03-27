@@ -20,6 +20,14 @@ const userReducer = (state = INITIAL_STATE, action) => {
         error: action.payload
       };
 
+    case UserActionTypes.SIGN_OUT_SUCCESS:
+    case UserActionTypes.SIGN_OUT_FAILURE:
+      return {
+        ...state,
+        currentUser: null,
+        error: null
+      };
+
     default:
       return state;
   }
