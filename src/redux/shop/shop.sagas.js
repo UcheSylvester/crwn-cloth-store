@@ -1,4 +1,4 @@
-import { takeEvery, call, put } from "redux-saga/effects";
+import { takeLatest, call, put } from "redux-saga/effects";
 import ShopActionsTypes from "./shop.types";
 
 import {
@@ -23,22 +23,10 @@ export function* fetchCollectionsAsync() {
   } catch (error) {
     yield put(fetchCollectionsFailure(error.message));
   }
-
-  // dispatch(fetchCollectionsStart());
-
-  // collectionRef
-  //   .get()
-  //   .then(snapshot => {
-  //     console.log(snapshot);
-  //     const collectionsMap = converCollectionsSnapshotToMap(snapshot);
-
-  //     dispatch(fetchCollectionsSuccess(collectionsMap));
-  //   })
-  //   .catch(error => dispatch(fetchCollectionsFailure(error.message)));
 }
 
 export function* fetchCollectionsStart() {
-  yield takeEvery(
+  yield takeLatest(
     ShopActionsTypes.FECTH_COLLECTIONS_START,
     fetchCollectionsAsync
   );
