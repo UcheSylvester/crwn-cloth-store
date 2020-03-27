@@ -4,7 +4,7 @@ import {
   converCollectionsSnapshotToMap
 } from "../../firebase/firebase.utils";
 
-export const fetchCollectonsStart = () => ({
+export const fetchCollectionsStart = () => ({
   type: ShopActionsTypes.FECTH_COLLECTIONS_START
 });
 
@@ -22,7 +22,7 @@ export const fetchCollectionsStartAsync = () => {
   return dispatch => {
     const collectionRef = firestore.collection("collections");
 
-    dispatch(fetchCollectonsStart());
+    dispatch(fetchCollectionsStart());
 
     collectionRef
       .get()
