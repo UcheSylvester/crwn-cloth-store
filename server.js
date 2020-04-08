@@ -24,15 +24,15 @@ app.use(cors());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "client/build")));
 
-  app.get("*", function(req, res) {
+  app.get("*", function (req, res) {
     res.sendFile(path.join(__dirname, "client/build", "index.html"));
   });
 }
 
-app.listen(port, error => {
+app.listen(port, (error) => {
   if (error) throw error;
 
-  console.log("server running on port" + port);
+  console.log("server running on port " + port);
 });
 
 // HANDLING STRIPE PAYMENT
@@ -41,7 +41,7 @@ app.post("/payment", (req, res) => {
   const body = {
     source: req.body.token.id,
     amount: req.body.amount,
-    currency: "usd"
+    currency: "usd",
   };
 
   // MAKING STRIPE PAYMENTS WITH THE BODY (ABOVE), AND RESPONDING WITH ERROR OR RESPONSE FROM STRIPE
